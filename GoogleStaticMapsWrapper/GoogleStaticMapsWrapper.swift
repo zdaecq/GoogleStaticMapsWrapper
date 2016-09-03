@@ -47,7 +47,7 @@ public class GoogleStaticMapsWrapper {
     public var height: Int
     public var zoom: Int
 
-    public var isCustomMarker = true
+    public var isShowingMarker = true
     public var markerIconURL: String?
 
     public var mapType = GoogleMapsType.Roadmap
@@ -125,7 +125,7 @@ public class GoogleStaticMapsWrapper {
 
     private func setCustomMarkerIfNeed() {
 
-        if !isCustomMarker {
+        if !isShowingMarker {
             return
         }
 

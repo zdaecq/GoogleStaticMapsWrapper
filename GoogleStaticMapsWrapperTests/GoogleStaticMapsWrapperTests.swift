@@ -32,7 +32,7 @@ class GoogleStaticMapsWrapperTests: XCTestCase {
         wrapper.imageScale = .two
         wrapper.language = "ru"
         wrapper.markerIconURL = "http://clevelandhistorical.org/themes/curatescape/images/marker.png"
-        wrapper.isCustomMarker = true
+        //wrapper.isShowingMarker = false
         wrapper.mapType = .Hybrid
         wrapper.imageFormat = .jpg
         //wrapper.key = ""
