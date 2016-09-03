@@ -10,6 +10,7 @@
 		667D37361D79CDFB00D8B285 /* GoogleStaticMapsWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 667D37351D79CDFB00D8B285 /* GoogleStaticMapsWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		667D373D1D79CDFB00D8B285 /* GoogleStaticMapsWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667D37321D79CDFB00D8B285 /* GoogleStaticMapsWrapper.framework */; };
 		667D37421D79CDFB00D8B285 /* GoogleStaticMapsWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D37411D79CDFB00D8B285 /* GoogleStaticMapsWrapperTests.swift */; };
+		667D374D1D79CE9C00D8B285 /* GoogleStaticMapsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D374C1D79CE9C00D8B285 /* GoogleStaticMapsWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		667D373C1D79CDFB00D8B285 /* GoogleStaticMapsWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleStaticMapsWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		667D37411D79CDFB00D8B285 /* GoogleStaticMapsWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStaticMapsWrapperTests.swift; sourceTree = "<group>"; };
 		667D37431D79CDFB00D8B285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		667D374C1D79CE9C00D8B285 /* GoogleStaticMapsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleStaticMapsWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		667D37341D79CDFB00D8B285 /* GoogleStaticMapsWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				667D374C1D79CE9C00D8B285 /* GoogleStaticMapsWrapper.swift */,
 				667D37351D79CDFB00D8B285 /* GoogleStaticMapsWrapper.h */,
 				667D37371D79CDFB00D8B285 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667D374D1D79CE9C00D8B285 /* GoogleStaticMapsWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,28 +314,33 @@
 		667D37471D79CDFB00D8B285 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GoogleStaticMapsWrapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BY.GoogleStaticMapsWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		667D37481D79CDFB00D8B285 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GoogleStaticMapsWrapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BY.GoogleStaticMapsWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +387,7 @@
 				667D37481D79CDFB00D8B285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		667D37491D79CDFB00D8B285 /* Build configuration list for PBXNativeTarget "GoogleStaticMapsWrapperTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +396,7 @@
 				667D374B1D79CDFB00D8B285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

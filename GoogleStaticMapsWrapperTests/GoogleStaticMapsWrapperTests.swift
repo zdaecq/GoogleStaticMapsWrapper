@@ -7,30 +7,45 @@
 //
 
 import XCTest
-@testable import GoogleStaticMapsWrapper
+//@testable
+import GoogleStaticMapsWrapper
 
 class GoogleStaticMapsWrapperTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        print("----- setUp")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+         print("----- tearDown")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetImage() {
+        print("----- testGetImage")
+        
+        let wrapper = GoogleStaticMapsWrapper(place: "Краснодар, 131, ставрапольская", width: 1000, height: 200, zoom: 17)
+        wrapper.isSavingImage = true
+        wrapper.imageScale = .two
+        wrapper.language = "ru"
+        wrapper.markerIconURL = "http://clevelandhistorical.org/themes/curatescape/images/marker.png"
+        wrapper.isCustomMarker = true
+        wrapper.mapType = .Hybrid
+        wrapper.imageFormat = .jpg
+        //wrapper.key = ""
+        wrapper.getImage()
+        XCTAssert(wrapper.getImage() != nil, "fail to save image")
     }
     
     func testPerformanceExample() {
+        print("----- testPerformanceExample")
         // This is an example of a performance test case.
-        self.measureBlock {
+        //self.measureBlock {
             // Put the code you want to measure the time of here.
-        }
+        //}
     }
     
 }
